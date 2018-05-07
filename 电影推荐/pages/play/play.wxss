@@ -1,0 +1,87 @@
+#myVideo{
+  width:750rpx;
+}
+.movie_summary {
+  padding: 10rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.movie_title {
+  font-weight: 700;
+  margin:20rpx 0;
+}
+.down{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+}
+.down image{
+  width:30rpx;
+  height:30rpx;
+  float:right;
+}
+
+.synopsis {
+  font-size: 18px;
+  border-left: 4px solid #47a86c;
+  padding-left: 10rpx;
+
+}
+
+.movie_text {
+  text-indent: 2em;
+}
+
+.movie_text text {
+  font-weight: 700;
+}
+
+.movie_action {
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 30rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.score {
+  float: left;
+  width: 374rpx;
+}
+
+.line {
+  height: 50rpx;
+  margin-top: 15rpx;
+  float: left;
+  border-right: 1px solid #ccc;
+}
+
+.collection {
+  float: right;
+  width: 374rpx;
+}
+
+.score image, .collection image {
+  vertical-align: middle;
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.view_detail {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 120rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  text-align: center;
+  color:green;
+}

@@ -1,0 +1,107 @@
+<block wx:if="{{showLoading}}">
+  <view></view>
+</block>
+<block wx:else>
+  <view class="content">
+    <view class="header">
+      <view class="movie_img">
+        <image class="img"  src="{{movie.images.large}}" mode='aspectFit'></image>
+        <image class="play" src="../../img/icon/play.svg" style="width:80rpx;height:80rpx;" catchtap='view'></image>
+      </view>
+      <view class="movie_message">
+        <view class="star">
+          <block wx:for="{{[2,4,6,8,10]}}">
+            <image wx:if="{{item>star1+1}}" src="../../img/icon/xingxing.svg" style="width:50rpx;height:50rpx;"></image>
+            <image wx:elif="{{item===star1+1}}" src="../../img/icon/halfStar.svg" style="width:50rpx;height:50rpx;"></image>
+            <image wx:else="{{item<star1}}" src="../../img/icon/star.svg" style="width:50rpx;height:50rpx;"></image>
+          </block>
+          <text wx:if="{{movie.rating.average>0}}">{{movie.rating.average}}分</text>
+          <text wx:else>暂无评分</text>
+          <view class=""></view>
+        </view>
+        <view>名称:{{movie.title}}</view>
+        <view>导演:{{movie.director}}</view>
+        <view>主演:{{movie.cast}} </view>
+        <view>类型:{{movie.genre}}</view>
+        <view>上映时间:{{movie.year}}</view>
+
+      </view>
+    </view>
+    <view class="view_detail">
+      <view class="see">看过({{movie.collect_count}})</view>
+      <view class="wantSee">
+        ({{movie.wish_count}})
+        <text>\n</text>想看
+      </view>
+      <view class="reviews_count">影评数量({{movie.reviews_count}})</view>
+    </view>
+    <view class="movie_summary">
+      <view class="movie_title">
+        <text class="synopsis">剧情简介</text>
+      </view>
+      <view class="movie_text" style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:{{line}};overflow: hidden;text-overflow: ellipsis;" wx:if="{{movie.summary.length>0}}">{{movie.summary}}</view>
+      <view class="movie_text" wx:else>暂无简介</view>
+      <view class="down" catchtap='moreInfo'>
+        <image src="{{moreInfo}}"></image>
+      </view>
+    </view>
+    <view class="movie_action">
+      <view class="score">
+        <image src='../../img/icon/icon-star.svg' style='width:50rpx;height:50rpx;'></image>
+        <text>评分</text>
+      </view>
+      <view class="line"></view>
+      <view class="collection" catchtap='collection'>
+        <image src='{{collectionImg}}' style='width:60rpx;height:60rpx;'></image>
+        <text>{{collection}}</text>
+      </view>
+    </view>
+    <view class="casts">演员列表</view>
+    <block>
+      <scroll-view scroll-x class="list">
+        <view class="casts_list" wx:for="{{movie.casts}}" catchtap='viewCastInfo' id="{{item.id}}">
+          <view class="casts_message">
+            <image class="cast_img" src="{{item.avatars.large}}" style='width:150rpx;height:150rpx;' mode='aspectFill'></image>
+            <view class="cast_name">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+    <view class="reviewsTitle">网友评论</view>
+    <block wx:if="{{reviewsSplice.length==0}}">
+      <view class="noReviews">暂无评论</view>
+    </block>
+    <block wx:elif="{{reviewsSplice.length<4}}">
+      <view class="reviewsInfo" wx:for="{{reviewsSplice}}">
+        <view class="reviewsAvatar">
+          <image src="{{item.author.avatar}}" style="width:100rpx;height:100rpx;border-radius:50%;" mode='aspectFill'></image>
+        </view>
+        <view>
+          <view class="reviewsName">{{item.author.name}}</view>
+          <view class="title">
+            <text>标题:</text>{{item.title}}</view>
+          <view class="sumarry">{{item.summary}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="reviews">
+        <view class="reviewsInfo" wx:for="{{reviewsSplice}}">
+          <view class="reviewsAvatar">
+            <image src="{{item.author.avatar}}" style="width:100rpx;height:100rpx;border-radius:50%;" mode='aspectFill'></image>
+          </view>
+          <view>
+            <view class="reviewsName">{{item.author.name}}</view>
+            <view class="title">
+              <text>标题:</text>{{item.title}}</view>
+            <view class="sumarry">{{item.summary}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="more" catchtap='loadMore'>
+        <button>{{value}}</button>
+      </view>
+    </block>
+
+  </view>
+</block>

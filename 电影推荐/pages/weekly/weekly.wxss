@@ -1,0 +1,8 @@
+@import "../../component/films/films.wxss";
+.content{
+  animation:fadein 1.8s ease ;
+}
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}

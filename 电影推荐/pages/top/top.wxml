@@ -1,0 +1,2 @@
+<import src="../../component/films/films.wxml"/>
+<template is="films" data="{{movies:movies,hasMore:hasMore,showLoading:showLoading}}"/>

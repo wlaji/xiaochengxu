@@ -1,0 +1,49 @@
+<block wx:if="{{showLoading}}">
+  <view></view>
+</block>
+<block wx:else>
+  <view class="content">
+    <view class="castInfo">
+      <view class="castInfoUp">
+        <view class="castImg">
+          <image src="{{cast.avatars.large}}" mode='aspectFill' style="width:250rpx;height:250rpx;border-radius:50%;"></image>
+        </view>
+      </view>
+      <view class="castsInfoDown">
+        <view class="downInfo">
+          姓名:
+          <text>{{cast.name}}</text> 性别:
+          <text>{{cast.gender}} </text> 生日:
+          <text>{{cast.birthday}} </text> 星座:
+          <text>{{cast.constellation}}\n</text> 职业:
+          <text>{{profession}}</text> 出生地:
+          <text>{{cast.born_place}}</text>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="castSummary">
+    <text class="summary">人物简介:</text>{{sum2}}
+    <text class="viewMore" catchtap='viewMore'>{{more}}</text>
+    </view>
+    <view>
+      <view class="recomm">推荐作品</view>
+      <scroll-view scroll-x class="works">
+        <view class="work" wx:for="{{works}}" catchtap='filmsSummary' id="{{item.subject.id}}">
+          <image src="{{item.subject.images.large}}" mode='aspectFill' style="width:350rpx;height:400rpx;"></image>
+          <view class="workTitle">{{item.subject.title}}\t\t<text>{{item.subject.year}}</text></view>
+        </view>
+      </scroll-view>
+    </view>
+    <view >
+      <view class="castImgTitle">明星美图</view>
+      <scroll-view scroll-x class="castImg">
+       <view class="img" wx:for="{{cast.photos}}">
+        <image src="{{item.image}}" style="width:223.3rpx;height:223.3rpx;" mode='aspectfill'></image>
+       </view>
+      </scroll-view>
+    </view>
+    
+  </view>
+</block>

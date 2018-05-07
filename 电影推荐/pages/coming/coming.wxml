@@ -1,0 +1,24 @@
+<block  wx:if="{{showLoading}}">
+  <view class="loading"></view>
+</block>
+<block wx:else>
+
+  <view class="movie_item" wx:for="{{movies}}" catchtap="filmsSummary" id="{{item.id}}">
+    <view class="movie_img">
+      <image src="{{item.images.large}}" mode="aspectFill"></image>
+    </view>
+    <view class="movie_detail">
+      <text>{{item.text}}</text>
+    </view>
+    <view class="hr"></view>
+  </view>
+
+  <view class="point">
+      <view class="load" wx:if="{{hasMore}}">
+        正在加载中...  
+      </view>
+      <view class="load" wx:else>
+        没有更多了
+      </view>
+  </view>
+</block>

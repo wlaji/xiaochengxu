@@ -1,0 +1,81 @@
+.content{
+  animation:fadein 1.8s ease ;
+}
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.top250{
+  padding:10rpx;
+  margin-top:10rpx;
+
+}
+.banner {
+  width: 100%;
+  height: 300rpx;
+  background-color: #eee;
+  animation: fadeIn 1.8s;
+}
+
+.banner-item {
+  width: 100%;
+  height: 300rpx;
+}
+
+.top_title{
+  font-size:15px;
+  font-weight: 700;
+}
+.more{
+  color:green;
+  font-size:12px;
+}
+.header{
+  display:flex;
+  justify-content: space-between;
+  margin-bottom:20rpx;  
+  font-size:15px;
+
+}
+.mainbody{
+  white-space: nowrap; 
+}
+.mainbody .movie_info{
+  margin-right:3rpx;
+  width:239rpx;
+  height:350rpx;
+  display:inline-block;
+  border:1px solid #ccc;
+  background-color:aliceblue;
+
+}
+.mainbody view:nth-child(8n){
+   margin-right:0;
+}
+.mainbody view image{
+  width:100%;
+  height:300rpx;
+}
+.movie_info{
+  position:relative;
+}
+.movie_title{
+  width:150rpx;
+  position:absolute;
+  top:300rpx;
+  left:0;
+  font-size:12px;
+  line-height:50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.movie_average{
+  width:90rpx;
+  position:absolute;
+  top:300rpx;
+  right:5rpx;
+  text-align: right;
+  font-size:12px;
+  line-height:50rpx;
+}

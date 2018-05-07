@@ -1,0 +1,73 @@
+.content{
+  animation:fadein 1.8s ease ;
+}
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.head {
+  width: 750rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #fffeff;
+  text-align: center;
+  font-size: 18px;
+  
+}
+.user_img{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+}
+
+.user_name {
+  margin: 20rpx 0;
+}
+
+.collection{
+  padding:10rpx;
+  border-bottom:1px solid #ccc;
+  box-shadow:0 10rpx 10rpx #ccc; 
+}
+.collected{
+  margin-bottom:10rpx;
+  font-size:15px;
+}
+.moviesImg{
+  white-space: nowrap;
+  
+}
+.movieImg {
+  display:inline-block;
+  margin-right:30rpx;
+  position:relative;
+}
+.movieImg:last-child{
+  margin-right:0;
+}
+.movie_title{
+  font-size:15px;
+}
+.movie_title text{
+  color:#ccc;
+  margin-left:1rem;
+}
+.noCollected{
+  text-align:center;
+  font-size:15px;
+}
+.collectedImg{
+  position:absolute;
+  left:260rpx;
+  width:80rpx;
+  height:80rpx;
+  z-index:10;
+}
+
+
+

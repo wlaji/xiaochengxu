@@ -1,0 +1,231 @@
+/* pages/filmsDetail/filmsDetail.wxss */
+.content{
+  animation:fadein 1.8s ease ;
+}
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.header {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 420rpx;
+  padding: 10rpx 0;
+  color: white;
+  background: url("http://img5.imgtn.bdimg.com/it/u=406847372,4013973151&fm=27&gp=0.jpg");
+}
+
+.movie_img {
+  width: 300rpx;
+  height: 400rpx;
+}
+
+.star {
+  margin-bottom: 5rpx;
+}
+
+.star image {
+  vertical-align: text-bottom;
+}
+
+.star text {
+  font-size: 15px;
+  margin-left: 10rpx;
+}
+
+.movie_img .img {
+  width: 300rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.8);
+}
+
+.movie_message {
+  width: 400rpx;
+  align-self: center;
+  margin-left: 30rpx;
+  line-height: 1.3rem;
+  font-size: 13px;
+  font-family: "微软雅黑";
+}
+
+
+.movie_message view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie_summary {
+  padding: 10rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.movie_title {
+  font-weight: 700;
+  margin:20rpx 0;
+}
+.down{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+}
+.down image{
+  width:30rpx;
+  height:30rpx;
+  float:right;
+}
+
+.synopsis {
+  font-size: 18px;
+  border-left: 4px solid #47a86c;
+  padding-left: 10rpx;
+
+}
+
+.movie_text {
+  text-indent: 2em;
+}
+
+.movie_text text {
+  font-weight: 700;
+}
+
+.movie_action {
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 30rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.score {
+  float: left;
+  width: 374rpx;
+}
+
+.line {
+  height: 50rpx;
+  margin-top: 15rpx;
+  float: left;
+  border-right: 1px solid #ccc;
+}
+
+.collection {
+  float: right;
+  width: 374rpx;
+}
+
+.score image, .collection image {
+  vertical-align: middle;
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.view_detail {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 120rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  text-align: center;
+  color:green;
+}
+
+.see {
+  border-right: 1px solid #ccc;
+  width:250rpx;
+  align-self: center;
+}
+
+.wantSee {
+  width:246rpx;
+   align-self: center;
+}
+.reviews_count{
+  border-left:1px solid #ccc;
+  width:250rpx;
+  align-self: center;
+}
+.casts,.reviewsTitle{
+  font-weight:700;
+  margin:20rpx 10rpx;
+  font-size: 18px;
+  border-left: 4px solid #47a86c;
+  padding-left: 10rpx;
+}
+.list{
+  white-space: nowrap;
+
+}
+.casts_list{
+  display:inline-block;
+  margin-right:5rpx;
+}
+.casts_message{
+  width:236.6rpx;
+  height:250rpx;
+  margin-left:10rpx;
+  padding-top:30rpx;
+  border:1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+.cast_img{
+  border-radius:50%;
+}
+.cast_name{
+  font-size:12px;
+}
+.reviews{
+  padding:10rpx;
+  
+
+}
+.reviewsAvatar{
+  margin-right:10rpx;
+}
+.reviewsName{
+  color:green;
+}
+.reviewsInfo{
+  display:flex;
+  justify-content: center;
+  align-items:flex-start;
+  font-size:12px;
+  margin-bottom:20rpx;
+  border-bottom:1px solid #ccc;
+  padding-bottom:10rpx;
+}
+.title{
+  font-weight:700;
+}
+.sumarry{
+  word-wrap:break-word;
+  word-break:break-all;
+
+}
+.noReviews{
+  padding:10rpx;
+  font-size:15px;
+  text-align:center;
+  font-weight: 700;
+}
+.play{
+  position:relative;
+  top:-240rpx;
+  left:110rpx;
+  z-index:999;
+}

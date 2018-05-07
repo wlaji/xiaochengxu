@@ -1,0 +1,24 @@
+<view class="content">
+ <video id="myVideo" src="{{list}}" danmu-list="{{danmuList}}" direction enable-danmu danmu-btn controls></video>
+  <view class="movie_summary">
+      <view class="movie_title">
+        <text class="synopsis">剧情简介</text>
+      </view>
+      <view class="movie_text" style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:{{line}};overflow: hidden;text-overflow: ellipsis;" wx:if="{{movie.summary.length>0}}">{{movie.summary}}</view>
+      <view class="movie_text" wx:else>暂无简介</view>
+      <view class="down" catchtap='moreInfo'>
+        <image src="{{moreInfo}}"></image>
+      </view>
+    </view>
+    <view class="movie_action">
+      <view class="score">
+        <image src='../../img/icon/icon-star.svg' style='width:50rpx;height:50rpx;'></image>
+        <text>评分</text>
+      </view>
+      <view class="line"></view>
+      <view class="collection" catchtap='collection'>
+        <image src='{{collectionImg}}' style='width:60rpx;height:60rpx;'></image>
+        <text>{{collection}}</text>
+      </view>
+    </view>
+</view>

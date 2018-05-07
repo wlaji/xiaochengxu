@@ -1,0 +1,87 @@
+.movieList {
+  box-sizing: border-box;
+  width: 340rpx;
+  height: 550rpx;
+  float: left;
+  margin: 10rpx 17.5rpx;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}
+
+.movie_content image {
+  border-radius: 10rpx 10rpx 0 0;
+  width: 100%;
+  height: 400rpx;
+}
+
+.movie_content::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 50rpx;
+  background-color: #000;
+  opacity: 0.6;
+  position: absolute;
+  top: 350rpx;
+  z-index: 10;
+}
+
+.movie_content {
+  position: relative;
+}
+
+.movie_score {
+  height: 50rpx;
+  line-height: 50rpx;
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+  color: white;
+  font-size: 15px;
+  z-index: 20;
+}
+
+.movie_title, .movie_type {
+  padding-left: 10rpx;
+  font-size: 15px;
+  font-family: "微软雅黑";
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.movie_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie_type view {
+  float: left;
+  background-color:gainsboro;
+  margin-right: 10rpx;
+  width: 70rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+
+.point {
+  width: 100%;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.movie_item {
+  width: 750rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 10rpx 30rpx #f4f4f4;
+}

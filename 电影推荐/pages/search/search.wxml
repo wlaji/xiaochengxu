@@ -1,0 +1,28 @@
+<view class="searchBar">
+  <view class="search_bar">
+    <input class="search_txt" value="{{value}}" bindinput='searchNameInput' placeholder-class="search-txt-plc" placeholder="请输入关键词搜索" placeholder-style="color:#ccc;font-size:15px;" type="text" confirm-type="search" focus="{{focus}}"/>
+    <image src="../../img/icon/search_active_icon.png" class="search_img" catchtap='search'></image>
+    <image class="deleteValue" src='../../img/icon/cuowu.svg' style="width:50rpx;height:50rpx;display:{{show}}" catchtap='deleteValue'></image>
+    <view class="cancel" catchtap='cancel'>取消</view>
+  </view>
+  <view class="search_history">
+    <text>搜索记录</text>
+    <image src='../../img/icon/delete.svg' style="width:30rpx;height:30rpx;display:{{showDelete}}" bindtap="deleteHistory" ></image>
+    <view class="a">
+      <view class="searchData" wx:for="{{searchData}}" wx:for-item="key">
+       <view hover-class="hover" bindtap='searchBytext' data-text="{{key}}">{{key}}\t</view>
+      </view>
+    </view>
+  </view>
+  <view class="search_popular">
+    <view class="hotSearch">热门搜索</view>
+    <view hover-class="hover" class="hotTag" wx:for="{{hot}}" bindtap='searchBytext' data-text="{{item}}">{{index+1}}:{{item}}</view>
+  </view>
+  <view class="tags">
+    <view class="hotTags">热门标签</view>
+    <view catchtap='filmsSummarybyTag' data-text="{{item}}" hover-class="hover" class="tag" wx:for="{{tags}}">
+     {{item}}
+    </view>
+  </view>
+  
+</view>

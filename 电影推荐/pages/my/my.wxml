@@ -1,0 +1,38 @@
+<block wx:if="{{showLoading}}">
+  <view></view>
+</block>
+<block wx:else>
+  <view class="content">
+    <view class="head" style="background:url({{url}})">
+      <view class="user_info">
+        <open-data class="user_img" type="userAvatarUrl"></open-data>
+        <view class="user_name">
+          <view class="user_sex">
+            <open-data type="userNickName" lang="zh_CN"></open-data>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="collection">
+      <view class="collected">已收藏({{collected}})
+        <text><image src="{{more}}"></image></text>
+      </view>
+      <block wx:if="{{collected==0}}">
+        <view class="noCollected">该用户暂无收藏</view> 
+      </block>
+      <block wx:else>
+        <block>
+          <scroll-view scroll-x class="moviesImg">
+            <view class="movieImg" wx:for="{{movie}}" catchtap='filmsSummary' id="{{item.id}}">
+              <image src="{{item.images.large}}" style="width:350rpx;height:400rpx;border-radius:10rpx;" mode='aspectFill'></image>
+              <image class="collectedImg" src="{{collectedImg}}" catchtap='cancelCollected' id="{{item.id}}"></image>
+              <view class="movie_title">{{item.title}}
+                <text>{{item.year}}</text>
+              </view>
+            </view>
+          </scroll-view>
+        </block>
+      </block>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/popular/popular",
+    "pages/coming/coming",
+    "pages/list/list",
+    "pages/my/my",
+    "pages/newMovies/newMovies",
+    "pages/usBox/usBox",
+    "pages/weekly/weekly",
+    "pages/top/top",
+    "pages/search/search",
+    "pages/searchResult/searchResult",
+    "pages/searchResultByTag/searchResultByTag",
+    "pages/filmsDetail/filmsDetail",
+    "pages/castsDetail/castsDetail",
+    "pages/play/play"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#43a39f",
+    "navigationBarTitleText": "电影推荐",
+    "navigationBarTextStyle":"white",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#47a86c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/popular/popular",
+        "iconPath": "img/icon/popular_icon.png",
+        "selectedIconPath": "img/icon/popular_active_icon.png",
+        "text": "热映"
+      },
+      {
+        "pagePath": "pages/coming/coming",
+        "iconPath": "img/icon/coming_icon.png",
+        "selectedIconPath": "img/icon/coming_active_icon.png",
+        "text": "待映"
+      },
+      {
+        "pagePath":"pages/list/list",
+        "iconPath": "img/icon/top_icon.png",
+        "selectedIconPath": "img/icon/top_active_icon.png",
+        "text": "榜单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "img/icon/my_icon.png",
+        "selectedIconPath": "img/icon/my_active_icon.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

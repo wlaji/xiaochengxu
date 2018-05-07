@@ -1,0 +1,94 @@
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.search_bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  position: relative;
+  animation: fadeIn 1.8s;
+}
+.search_txt {
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px solid #43a39f;
+  border-radius: 10px;
+  padding: 0 20rpx;
+  background-color: white;
+}
+
+.search_img {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  left:76%;
+  top: 26rpx;
+  z-index:10
+}
+.cancel{
+  font-size:15px;
+  line-height:80rpx;
+  color:#ccc;
+  margin-right:10rpx;
+}
+.deleteValue{
+  position:absolute;
+  z-index: 10;
+  left:68%;
+  top:25rpx;
+}
+.search_history {
+  margin:40rpx 10rpx 10rpx 10rpx;
+  overflow: hidden;
+}
+.search_history text,.hotSearch,.hotTags{
+  font-weight:700;
+  font-size:18px;
+  border-left:4px solid green;
+  padding-left:10rpx;
+}
+.a{
+  margin-top:20rpx;
+}
+.search_history image{
+  float:right;
+  vertical-align: middle;
+  margin-top:12rpx;
+}
+.searchData {
+  float:left;
+}
+.searchData view{
+  display: inline-block;
+  height:40rpx;
+  line-height:40rpx;
+  border-radius:10rpx;
+  font-size:15px;
+  border:1px solid #ccc;
+  color:grey;
+  margin-right:10rpx;
+  padding:0 10rpx;
+
+
+}
+.search_popular,.tags{
+  margin-left:10rpx;
+  margin-top:40rpx;
+}
+.hotTag,.tag{
+  display: inline-block;
+  font-size:15px;
+  padding:10rpx;
+  border-radius: 10rpx;
+  border:1px solid #ccc;
+  margin:10rpx 10rpx 10rpx 0;
+  color:grey;
+}
+.tags{
+  float:left;
+}
+.hover{
+  background-color:#ccc;
+}

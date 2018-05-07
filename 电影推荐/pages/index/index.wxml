@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image src="/img/icon/movie.svg"></image>
+  </view>
+  <view class="usermotto">
+    小众也可以出众
+  </view>
+   <navigator class="start" open-type="switchTab" url="../popular/popular">开始体验</navigator>
+</view>

@@ -1,0 +1,74 @@
+<view wx:if="{{showLoading}}"></view>
+<view wx:else class="content">
+ <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500">
+      <block wx:for="{{bannerList}}">
+        <swiper-item catchtap="filmsSummary" id="{{item.id}}">
+          <image src="{{item.imgUrl}}" class="banner-item" />
+        </swiper-item>
+      </block>
+    </swiper>
+  <view class="top250">
+    <view class="header">
+      <view class="top_title">Top250</view>
+      <view class="more" bindtap='viewTop250'>
+        <navigator url='../top/top' >更多>></navigator> 
+      </view>
+    </view>
+    <scroll-view class="mainbody" scroll-x>
+      <view class="movie_info" wx:for="{{movies}}" catchtap="filmsSummary" id="{{item.id}}">
+          <image class="filmsImg" src="{{item.images.large}}" mode='aspectFill'></image>
+          <view class="movie_title">{{item.title}}</view>
+          <view wx:if="{{item.rating.average!=0}}" class="movie_average">{{item.rating.average}}分</view>
+          <view wx:else class="movie_average">暂无评分</view>
+      </view>
+    </scroll-view>
+  </view>
+   <view class="top250">
+    <view class="header">
+      <view class="top_title">口碑榜</view>
+      <view class="more" bindtap='viewTop250'>
+        <navigator url='../weekly/weekly' >更多>></navigator> 
+      </view>
+    </view>
+    <scroll-view class="mainbody" scroll-x>
+      <view class="movie_info" wx:for="{{weeklyMovies}}" catchtap="filmsSummary" id="{{item.subject.id}}">
+          <image class="filmsImg" src="{{item.subject.images.large}}" mode='aspectFill'></image>
+          <view class="movie_title">{{item.subject.title}}</view>
+          <view wx:if="{{item.subject.rating.average!=0}}" class="movie_average">{{item.subject.rating.average}}分</view>
+          <view wx:else class="movie_average">暂无评分</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="top250">
+    <view class="header">
+      <view class="top_title">北美票房榜</view>
+      <view class="more" bindtap='viewTop250'>
+        <navigator url='../usBox/usBox' >更多>></navigator> 
+      </view>
+    </view>
+    <scroll-view class="mainbody" scroll-x>
+      <view class="movie_info" wx:for="{{usBoxMovies}}" catchtap="filmsSummary" id="{{item.subject.id}}">
+          <image class="filmsImg" src="{{item.subject.images.large}}" mode='aspectFill'></image>
+          <view class="movie_title">{{item.subject.title}}</view>
+         <view wx:if="{{item.subject.rating.average!=0}}" class="movie_average">{{item.subject.rating.average}}分</view>
+          <view wx:else class="movie_average">暂无评分</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="top250">
+    <view class="header">
+      <view class="top_title">新片榜</view>
+      <view class="more" bindtap='viewTop250'>
+        <navigator url='../newMovies/newMovies' >更多>></navigator> 
+      </view>
+    </view>
+    <scroll-view class="mainbody" scroll-x>
+      <view class="movie_info" wx:for="{{newMovies}}" catchtap="filmsSummary" id="{{item.id}}">
+          <image class="filmsImg" src="{{item.images.large}}" mode='aspectFill'></image>
+          <view class="movie_title">{{item.title}}</view>
+         <view wx:if="{{item.rating.average!=0}}" class="movie_average">{{item.rating.average}}分</view>
+          <view wx:else class="movie_average">暂无评分</view>
+      </view>
+    </scroll-view>
+  </view> 
+</view>

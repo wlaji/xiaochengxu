@@ -1,0 +1,52 @@
+<template name="films">
+  <view wx:if="{{showLoading}}" class="loading"></view>
+  <view class="content" wx:else>
+    <view class="movie_item">
+      <view class="movieList" wx:for="{{movies}}" catchtap="filmsSummary" id="{{item.id}}">
+        <view class="movie_content">
+          <image src="{{item.images.large}}" mode="aspectFill"></image>
+          <text class="movie_score" wx:if="{{item.rating.average!=0}}">{{item.rating.average}}分</text>
+          <text class="movie_score" wx:else>暂无评分</text>
+        </view>
+        <view class="movie_title">{{item.title}}</view>
+        <view class="movie_type" wx:for="{{item.genres}}" wx:for-item="genresItem">
+          <view catchtap='filmsSummarybyTag' data-text="{{genresItem}}">{{genresItem}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="point">
+      <view class="load" wx:if="{{hasMore}}">
+        正在加载中...
+      </view>
+      <view class="load" wx:else>
+        没有更多了
+      </view>
+    </view>
+  </view>
+</template>
+<template name="films2">
+  <view wx:if="{{showLoading}}" class="loading"></view>
+  <view class="content" wx:else>
+    <view class="movie_item">
+      <view class="movieList" wx:for="{{movies}}" catchtap="filmsSummary" id="{{item.subject.id}}">
+        <view class="movie_content">
+          <image src="{{item.subject.images.large}}" mode="aspectFill"></image>
+          <text class="movie_score" wx:if="{{item.subject.rating.average!=0}}">{{item.subject.rating.average}}分</text>
+          <text class="movie_score" wx:else>暂无评分</text>
+        </view>
+        <view class="movie_title">{{item.subject.title}}</view>
+        <view class="movie_type" wx:for="{{item.subject.genres}}" wx:for-item="genresItem">
+          <view catchtap='filmsSummarybyTag' data-text="{{genresItem}}">{{genresItem}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="point">
+      <view class="load" wx:if="{{hasMore}}">
+        正在加载中...
+      </view>
+      <view class="load" wx:else>
+        没有更多了
+      </view>
+    </view>
+  </view>
+</template>

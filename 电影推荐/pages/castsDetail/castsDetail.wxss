@@ -1,0 +1,56 @@
+.content{
+  animation:fadein 1.8s ease ;
+}
+@keyframes fadein{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.castInfo{
+  height:400rpx;
+  display:flex;
+  padding:10rpx;
+  flex-direction: column;
+  justify-content: center;
+  font-size:13px;
+  background-color:	#2B2B2B;
+  color:white;
+}
+.castSummary{
+  padding:5rpx;
+  font-size:13px;
+}
+.summary{
+  font-weight: 700;
+}
+.viewMore{
+  color:green;
+}
+.recomm,.castImgTitle{
+  font-weight: 700;
+  margin:20rpx 10rpx;
+  font-size: 18px;
+  border-left: 4px solid #47a86c;
+  padding-left: 10rpx;
+}
+.workTitle{
+  font-size:15px;
+
+}
+.workTitle text{
+  font-size:14px;
+  color:#ccc;
+}
+.works,.castImg{
+  white-space: nowrap;
+  margin:0 10rpx;
+}
+.work,.img{
+  display:inline-block;
+  margin-right:30rpx;
+}
+.work:last-child,.img:last-child{
+  margin-right:20rpx;
+}
+.img image{
+  border-radius: 5rpx;
+}
