@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/toutiao/index",
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#71B3F7",
+     "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/toutiao/index",
+       "iconPath": "assets/img/zixun@2x.png",
+      "selectedIconPath": "assets/img/zixun_selected@2x.png",
+      "text": "首  页"
+    },{
+      "pagePath": "pages/index/index",
+       "iconPath": "assets/img/wo@2x.png",
+      "selectedIconPath": "assets/img/wo_selected@2x.png",
+      "text": "个 人 中 心"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#71B3F7",
+    "navigationBarTitleText": "今日头条",
+    "navigationBarTextStyle":"white"
+  }
+}

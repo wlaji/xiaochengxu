@@ -1,0 +1,6 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+
+<!--正文-->
+<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+
+
